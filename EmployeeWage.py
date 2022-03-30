@@ -3,7 +3,7 @@
 @Date: 2022-03-30 20: 47: 00
 @Last Modified by: Sai Tarun
 @Last Modified time: 2022-03-30 20: 50: 00
-@Title: Total working hours.
+@Title: Daily Wage and Total Wage.
 '''
 
 import random
@@ -22,12 +22,13 @@ def working_hours_fun(check_attendance):
 def cal_hours():
     """
         Description:
-            Function is used to calculate Working Hours.
+            Function is used to calculate daily wage and total wage
         Parameter:
             No parameter is required 
         Return:
-            Returns nothing,but prints total working hours
+            Returns nothing,but prints daily wage and total wage
     """
+    Rate_Per_Hour=20
     Max_Working_Days=20
     Max_Working_Hours_In_Month=100
     Total_Emp_Hours=0
@@ -36,6 +37,8 @@ def cal_hours():
         Total_Working_Days+=1
         check_attendance=random.randint(0,2)
         working_hours=working_hours_fun(check_attendance)
+        Daily_Wage=working_hours*Rate_Per_Hour
+        print("Daily Wage of Employee is ",Daily_Wage)
         Total_Emp_Hours=Total_Emp_Hours+working_hours
     print("Total Working Hours are",Total_Emp_Hours)
 cal_hours()
