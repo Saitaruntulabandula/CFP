@@ -38,7 +38,8 @@ def cal_hours():
         check_attendance=random.randint(0,2)
         working_hours=working_hours_fun(check_attendance)
         Daily_Wage=working_hours*Rate_Per_Hour
-        print("Daily Wage of Employee is ",Daily_Wage)
+        print("For day",Total_Working_Days,"Daily Wage of Employee is ",Daily_Wage)
         Total_Emp_Hours=Total_Emp_Hours+working_hours
-    print("Total Working Hours are",Total_Emp_Hours)
+    employee_salary=(Rate_Per_Hour*Total_Emp_Hours)
+    print("Employee's Total Wage is:",employee_salary)
 cal_hours()
