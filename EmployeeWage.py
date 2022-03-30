@@ -9,9 +9,14 @@
 import random
 
 Present=1
+Rate_Per_Hour=20
 check_attendance=random.randint(0,1)
 
 if check_attendance==1:   
     print("Employee is Present")
+    working_hours=8
 else:
     print("Employee is Absent")
+    working_hours=0
+employee_salary=(Rate_Per_Hour*working_hours)
+print(f"Salary:{employee_salary}")
