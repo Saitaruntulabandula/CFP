@@ -57,11 +57,8 @@ def cal_hours():
         elif attendance_status==1:
             working_hours_count=random.randint(0,1)
             working_hours=working_hours_fun(working_hours_count)
-<<<<<<< HEAD
-=======
             total_working_days=total_working_days+1
             print("For Working day",total_working_days)
->>>>>>> UC9-DayDailyWageTotalWage
             if working_hours==8:
                 daily_wage=working_hours*rate_per_hour
                 print("Daily Wage of Employee is ",daily_wage)
@@ -71,10 +68,7 @@ def cal_hours():
                 print("Daily Wage of Employee is ",daily_wage)
                 total_emp_hours=total_emp_hours+4
             total_wage=total_wage+daily_wage
-<<<<<<< HEAD
             total_working_days=total_working_days+1
-=======
->>>>>>> UC9-DayDailyWageTotalWage
     print("Total emp wage:  ",total_wage)
     print("Total working days:  ",total_working_days)
     print("Total emp working hours: ",total_emp_hours)
