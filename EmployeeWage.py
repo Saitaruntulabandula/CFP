@@ -11,6 +11,7 @@
 import random
 from re import L
 
+
 def working_hours_fun(working_hours_count):
     """
         Description:
