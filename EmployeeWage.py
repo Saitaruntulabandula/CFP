@@ -52,6 +52,10 @@ def cal_hours():
     total_working_days=0
     total_wage=0
     list=[]
+<<<<<<< HEAD
+=======
+    day_list=[]
+>>>>>>> UC9-DayDailyWageTotalWage
     while(total_working_days<max_working_days) and (total_emp_hours<max_working_hours_in_month):
         check_attendance=random.randint(0,1)
         attendance_status=attendance(check_attendance)
@@ -69,7 +73,13 @@ def cal_hours():
             total_wage=total_wage+daily_wage
             total_working_days=total_working_days+1
             list.append(daily_wage)
+<<<<<<< HEAD
     print("Daily Wage of Employee is ",list)
+=======
+            day_list.append(total_working_days)
+    print("Daily Wage of Employee is ",list)
+    print("Days list",day_list)
+>>>>>>> UC9-DayDailyWageTotalWage
     print("Total emp wage:  ",total_wage)
     print("Total working days:  ",total_working_days)
     print("Total emp working hours: ",total_emp_hours)
