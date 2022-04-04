@@ -49,7 +49,9 @@ def cal_hours():
     total_emp_hours=0
     total_working_days=0
     total_wage=0
-    while(total_working_days<max_working_days) or (total_emp_hours<max_working_hours_in_month):
+    list=[]
+    day_list=[]
+    while(total_working_days<max_working_days) and (total_emp_hours<max_working_hours_in_month):
         check_attendance=random.randint(0,1)
         attendance_status=attendance(check_attendance)
         if attendance_status==0:
@@ -57,17 +59,18 @@ def cal_hours():
         elif attendance_status==1:
             working_hours_count=random.randint(0,1)
             working_hours=working_hours_fun(working_hours_count)
-            total_working_days=total_working_days+1
-            print("For Working day",total_working_days)
             if working_hours==8:
                 daily_wage=working_hours*rate_per_hour
-                print("Daily Wage of Employee is ",daily_wage)
                 total_emp_hours=total_emp_hours+8
             else:
                 daily_wage=working_hours*rate_per_hour
-                print("Daily Wage of Employee is ",daily_wage)
                 total_emp_hours=total_emp_hours+4
             total_wage=total_wage+daily_wage
+            total_working_days=total_working_days+1
+            list.append(daily_wage)
+            day_list.append(total_working_days)
+    print("Daily Wage of Employee is ",list)
+    print("Days list",day_list)
     print("Total emp wage:  ",total_wage)
     print("Total working days:  ",total_working_days)
     print("Total emp working hours: ",total_emp_hours)
